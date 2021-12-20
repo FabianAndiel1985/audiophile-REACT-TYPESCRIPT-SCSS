@@ -1,6 +1,51 @@
 @import "../../constants/_variables.scss";
 
 .mainNavbar{
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: $black;
     color: $white;
+    padding: 0em 0.9em;
+
+    .hamburgerIcon{
+
+        @media only screen and (min-width: $minTablet) {
+            margin-right:20px;
+        }
+
+        @media only screen and (min-width: $minDesktop) {
+            display: none;
+        }
+    }
+
+    .heading {
+        @media only screen and (min-width: $minTablet) {
+            margin-right:auto;
+        }
+
+        @media only screen and (min-width: $minDesktop) {
+            margin-right:initial;
+        }
+    }
+
+    // @media only screen and (min-width: $minDesktop) {
+    //     display:initial;
+    // }
+
+
+    &:after {
+        position: absolute;
+        content: '';
+        height:1.3px;
+        bottom:0.1px;
+        margin: 0 auto;
+		left: 0;
+        right: 0;
+		width: 100%;
+        background: silver;
+    }
 }
+
+

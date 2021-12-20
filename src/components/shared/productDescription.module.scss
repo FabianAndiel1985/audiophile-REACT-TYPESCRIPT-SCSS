@@ -1,0 +1,59 @@
+@import "../../constants/variables";
+
+
+@mixin productTextHeading {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 10px;
+}
+
+@mixin productText {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.container{
+    text-align: center;
+
+    &_headingSilver{
+        opacity: 0.4963815;
+        color: $white;
+        @include productTextHeading;
+    }
+
+    &_headingOrange{
+        color: $darkOrange;
+        @include productTextHeading;
+    }
+
+    &_productNameBig{
+        color: $white;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 1.2857143px;
+        text-align: center;
+    }
+
+    &_productNameSmall{
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 38px;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    &_textSilver{
+            opacity: 0.75;
+            color: $white;
+            @include productText;
+    }
+
+    &_textBlack {
+        opacity: 0.5;
+        @include productText;
+      }
+
+}

@@ -1,0 +1,23 @@
+@import "../../constants/_variables.scss";
+ul {
+    display:none;
+
+    .listItem{
+        font-weight:bold;
+        float:left;
+        display:block;
+        color: $white;
+        margin-right:1em;
+        cursor:pointer;
+        &:hover{
+            color: $brightOrange;
+            transition: transform 0.5s ease-out;
+            transform: scale(1.1);
+        }
+    }
+
+    @media only screen and (min-width: $minDesktop) {
+        display:initial;
+    }
+
+}
