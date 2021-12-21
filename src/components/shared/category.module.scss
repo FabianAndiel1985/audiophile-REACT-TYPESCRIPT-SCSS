@@ -1,0 +1,41 @@
+@import "../../constants/variables";
+
+.box{
+    position:relative;
+    width:350px;
+    height:204px;
+    background-color:$brightSilver;
+
+
+    &_image{
+        background-image: url("../../assets/home/mobile/image-speaker-zx9.png") ;
+        background-position: center center; 
+        background-repeat: no-repeat; 
+        background-size: cover;
+        position: relative;
+        bottom:20px;
+        width:122.95px;
+        height:160px;
+        border: 1px solid black;
+        margin:0em auto;
+    }
+
+    &_category{
+        text-align: center;
+    }
+
+    &_link{
+        color:$darkOrange;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &_arrow{
+            display: inherit;
+            align-items: inherit;
+            margin-left: 0.4em;
+            justify-content: center;
+        }
+    }
+
+}

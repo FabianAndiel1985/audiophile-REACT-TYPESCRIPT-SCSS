@@ -2,6 +2,7 @@ import styles from "./home.module.scss";
 import Navbar from "../components/shared/navbar.component";
 import { grabWelcomeProduct } from "../services/services";
 import ProductDescription from "../components/shared/productDescription.component";
+import CategoryBox from "../components/shared/category.component";
 
 const App = (): JSX.Element => {
 
@@ -20,6 +21,9 @@ const App = (): JSX.Element => {
        />
       
     </div>
+    <CategoryBox
+      categoryName={"Kategorie"}
+    />
     
     </>
   );

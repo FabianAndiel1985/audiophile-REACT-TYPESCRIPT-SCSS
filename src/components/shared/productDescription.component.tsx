@@ -27,12 +27,11 @@ const ProductDescription = ({productName,category,description}:ProductDescriptio
             <h1
             className={ darkBackground ? styles.container_productNameBig : styles.container_productNameSmall}
             > 
-                {productName} <br/>
-                {category}
+                {productName} 
             </h1>
             <p
               className={ darkBackground ? styles.container_textSilver : styles.container_textBlack}
-            > {description}r</p>
+            > {description}</p>
             <OrangeButton/>
         </div>
     </>

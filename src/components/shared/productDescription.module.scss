@@ -16,6 +16,7 @@
 
 .container{
     text-align: center;
+    padding: 0em 1.75em;
 
     &_headingSilver{
         opacity: 0.4963815;
@@ -34,7 +35,6 @@
         font-weight: 700;
         line-height: 40px;
         letter-spacing: 1.2857143px;
-        text-align: center;
     }
 
     &_productNameSmall{
@@ -55,5 +55,19 @@
         opacity: 0.5;
         @include productText;
       }
+
+        @media only screen and (min-width: $minTablet) {
+        padding: 0em 10em;
+    }
+
+        @media only screen and (min-width: $minDesktop) {
+        padding: 0;
+        width:300px;
+        text-align: left;
+        margin-left: 7em;
+    }
+
+
+
 
 }
