@@ -1,0 +1,51 @@
+@import "../../constants/variables";
+
+
+@mixin basicProductBox{
+   display: flex;
+   align-items: center;
+   width:100%;
+   height:100%;
+   margin: 0em auto;
+   text-align: left;
+   padding-left: 1.7em;
+   border-radius: $border-radius;
+   @include responsiveBackgroundPicture;
+}
+
+.productBoxZX7{
+   @include basicProductBox;
+  
+   background-image: url("../../assets/home/mobile/image-speaker-zx7.jpg");
+
+   @media only screen and (min-width: $minTablet) {
+      background-image: url("../../assets/home/tablet/image-speaker-zx7.jpg");
+   }
+
+   @media only screen and (min-width: $minDesktop) {
+      background-image: url("../../assets/home/desktop/image-speaker-zx7.jpg");
+   }
+}
+
+.productBoxPlain{
+   @include basicProductBox;
+
+   background: $brightSilver;
+  
+}
+
+
+
+.productBoxPicture{
+   @include basicProductBox;
+   
+   background-image: url("../../assets/home/mobile/image-earphones-yx1.jpg");
+
+   @media only screen and (min-width: $minTablet) {
+      background-image: url("../../assets/home/tablet/image-earphones-yx1.jpg");
+   }
+
+   @media only screen and (min-width: $minDesktop) {
+      background-image: url("../../assets/home/desktop/image-earphones-yx1.jpg");
+   }
+}

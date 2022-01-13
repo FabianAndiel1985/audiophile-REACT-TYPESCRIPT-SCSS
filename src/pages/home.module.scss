@@ -4,17 +4,13 @@
 .imageContainer{
     width:100%;
     height:729px;
-    border: 2px solid black;	
     display: flex;
     align-items: center;
     justify-content: center;
 
     background-image: url("../assets/home/mobile/image-header.jpg"); 
-    background-position: center center; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    background-size: cover; 
-    background-color: #464646; 
+
+    @include responsiveBackgroundPicture;
 
     @media only screen and (min-width: $minTablet) {
         background-image: url("../assets/home/tablet/image-header.jpg"); 
@@ -24,8 +20,24 @@
         background-image: url("../assets/home/desktop/image-hero.jpg"); 
         justify-content: left;
     }
+}
+
+.mainContainer{
+    padding:7em 1em;
+
+    .firstBox{
+        display: relative;
+        height:320px;
+    }
 
 
 
+    @media only screen and (min-width: $minTablet) {
+       padding:7em 2em;
+    }
+
+    @media only screen and (min-width: $minDesktop) {
+        padding:7em 8em;
+     }
 
 }

@@ -1,5 +1,5 @@
 import styles from "./productDescription.module.scss";
-import OrangeButton from "./orangeButton.component";
+import CustomButton from "./customButton.component";
 
 type  ProductDescriptionProps = {
   productName: string,
@@ -32,7 +32,9 @@ const ProductDescription = ({productName,category,description}:ProductDescriptio
             <p
               className={ darkBackground ? styles.container_textSilver : styles.container_textBlack}
             > {description}</p>
-            <OrangeButton/>
+            <CustomButton
+              theme={"orange"}
+            />
         </div>
     </>
   );

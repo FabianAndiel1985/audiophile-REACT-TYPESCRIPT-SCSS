@@ -1,0 +1,11 @@
+@import "../../constants/_variables.scss";
+
+.boxes{
+    @media only screen and (min-width: $minTablet) {
+    display: flex;
+    flex-direction: row;
+    }
+
+   
+    
+}

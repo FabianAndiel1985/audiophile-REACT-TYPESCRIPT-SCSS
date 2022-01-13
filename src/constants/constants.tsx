@@ -1,3 +1,10 @@
+//screen sizes
+
+export const maxPhone = 375;
+export const minTablet = maxPhone+1;
+export const maxTablet = 768;
+export const minDesktop = maxPhone+1;
+
 // colors
 
 export const black = "#000000"
@@ -10,4 +17,8 @@ export const darkOrange = "#D87D4A"
 
 // texts
 
-export const headings = ["HOME","HEADPHONES","SPEAKERS","EARPHONES"]
+export const headings:string[] = ["HOME","HEADPHONES","SPEAKERS","EARPHONES"]
+
+// social media
+
+export const socialMedias:string[]= ["facebook","instagram","twitter"];

@@ -1,36 +1,83 @@
 @import "../../constants/variables";
 
-.box{
-    position:relative;
-    width:350px;
-    height:204px;
-    background-color:$brightSilver;
+@mixin centerAbsolutePicture {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;   
+}
 
+
+@mixin boxSizeTablet{
+    width: 223px;
+    height: 165px;
+}
+
+@mixin boxSizeDesktop{
+    width: 350px;
+    height: 204px;
+}
+
+@mixin imageSizeDesktop{
+    width: 121.49px;
+    height: 146px;
+}
+
+@mixin box ($tabletPcMarginLeft:false) {
+    position:relative;
+    width:327px;
+    height:165px;
+    background-color:$brightSilver;
+    border-radius: $border-radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 0.3em;
+    margin: 0em auto 7em auto;
 
     &_image{
         background-image: url("../../assets/home/mobile/image-speaker-zx9.png") ;
-        background-position: center center; 
-        background-repeat: no-repeat; 
-        background-size: cover;
-        position: relative;
-        bottom:20px;
-        width:122.95px;
-        height:160px;
-        border: 1px solid black;
-        margin:0em auto;
+        
+        @include responsiveBackgroundPicture;
+
+        width:84.04px;
+        height:101px;
+        position: absolute;
+        top:-70px;
+
+        @include centerAbsolutePicture;
+
+        @media only screen and (min-width: $minDesktop) {
+            @include imageSizeDesktop;
+        }
     }
 
     &_category{
         text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1.2857143px;
+        margin-bottom: 0.8em;
     }
 
     &_link{
-        color:$darkOrange;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-bottom: 0.8em;
+        opacity: 0.5;
+
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
 
         &_arrow{
+            color:$darkOrange;
             display: inherit;
             align-items: inherit;
             margin-left: 0.4em;
@@ -38,4 +85,30 @@
         }
     }
 
+
+    @media only screen and (min-width: $minTablet) {
+        @include boxSizeTablet;
+
+        @if $tabletPcMarginLeft {
+           margin-left: 10px;
+          }
+    }
+
+    @media only screen and (min-width: $minDesktop) {
+        @include boxSizeDesktop;
+        @if $tabletPcMarginLeft {
+            margin-left: 20px;
+           }
+
+    }
 }
+
+
+.box{
+    @include box;
+}
+
+.boxInnerMargin{
+    @include box(true);
+}
+

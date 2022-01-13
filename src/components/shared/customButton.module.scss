@@ -1,0 +1,28 @@
+@import "../../constants/_variables.scss";
+
+
+@mixin basicButtonStyles($backgroundColor, $fontColor){
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border:none;
+    background-color:$backgroundColor; 
+    color: $fontColor;
+}
+
+.buttonOrange{
+    @include basicButtonStyles($darkOrange,$white);
+    &:hover{
+        background-color: $brightOrange;
+    }
+}
+
+.buttonBlack {
+    @include basicButtonStyles(transparent,black);
+    border:2px black solid;
+
+    &:hover{
+        background-color: black;
+        color: $white;
+    }
+}

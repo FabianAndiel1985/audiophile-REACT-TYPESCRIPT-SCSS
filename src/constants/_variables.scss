@@ -19,3 +19,14 @@ $darkOrange : #D87D4A;
 
 
 
+$border-radius:8px;
+
+
+@mixin responsiveBackgroundPicture {
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+
+

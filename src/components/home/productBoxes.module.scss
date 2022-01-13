@@ -1,0 +1,24 @@
+@import "../../constants/variables";
+
+.container {
+    position:relative;
+    margin-top:2em;
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+
+    .box{
+        height:200px;
+        @media only screen and (min-width: $minTablet) {
+            height:320px;
+         }
+    }
+
+    
+
+    @media only screen and (min-width: $minTablet) {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+     }
+}
