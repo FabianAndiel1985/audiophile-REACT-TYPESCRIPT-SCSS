@@ -1,6 +1,7 @@
 import styles from "./navbar.module.scss";
 import {HamburgerIcon, ShoppingCartIcon} from "../../constants/icons"
 import HorizontalList from "./horizontalList.component"
+import Heading from "./heading.component";
 
 const Navbar = (): JSX.Element => {
   
@@ -13,16 +14,14 @@ const Navbar = (): JSX.Element => {
           {HamburgerIcon}
         </span>
       
-        <h2
-         className={styles.heading}
-        >
-            audiophile
-        </h2>
+        <Heading
+          heading={"audiophile"}
+        />
 
-        <HorizontalList/>
-        
-
-
+        <HorizontalList
+          location={"top"}
+        />
+      
         {ShoppingCartIcon}
     </div>
   );

@@ -46,6 +46,12 @@ const App = (): JSX.Element => {
 
       <ProductBoxes/>
 
+
+      <div>
+
+        Test
+      </div>
+
     </main>
     <Footer/>
     </>

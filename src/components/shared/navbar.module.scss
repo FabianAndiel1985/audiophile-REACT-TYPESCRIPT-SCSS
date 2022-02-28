@@ -20,21 +20,6 @@
         }
     }
 
-    .heading {
-        @media only screen and (min-width: $minTablet) {
-            margin-right:auto;
-        }
-
-        @media only screen and (min-width: $minDesktop) {
-            margin-right:initial;
-        }
-    }
-
-    // @media only screen and (min-width: $minDesktop) {
-    //     display:initial;
-    // }
-
-
     &:after {
         position: absolute;
         content: '';

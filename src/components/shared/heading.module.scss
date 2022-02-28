@@ -1,0 +1,11 @@
+@import "../../constants/variables";
+
+.heading {
+    @media only screen and (min-width: $minTablet) {
+        margin-right:auto;
+    }
+
+    @media only screen and (min-width: $minDesktop) {
+        margin-right:initial;
+    }
+}

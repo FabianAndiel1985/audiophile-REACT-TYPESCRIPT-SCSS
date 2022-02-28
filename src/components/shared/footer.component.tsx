@@ -1,13 +1,20 @@
 import styles from "./footer.module.scss";
 import SocialMediaIcon from "./socialMediaIcon.component";
 import { socialMedias } from "../../constants/constants";
+import Heading from "./heading.component";
+import HorizontalList from "./horizontalList.component";
 
 const Footer = (): JSX.Element => {
   
   return (
     <footer className={styles.footer}>
+      <Heading
+      heading={"audiophile"}
+      />
 
-
+      <HorizontalList
+        location={"bottom"}
+      />
 
       <p>
         Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers 
