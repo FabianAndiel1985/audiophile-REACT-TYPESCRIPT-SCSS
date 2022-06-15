@@ -16,6 +16,7 @@ const Navbar = (): JSX.Element => {
       
         <Heading
           heading={"audiophile"}
+          location={"top"}
         />
 
         <HorizontalList

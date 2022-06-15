@@ -3,7 +3,9 @@
 export const maxPhone = 375;
 export const minTablet = maxPhone+1;
 export const maxTablet = 768;
-export const minDesktop = maxPhone+1;
+export const minDesktop = maxTablet+1;
+
+
 
 // colors
 

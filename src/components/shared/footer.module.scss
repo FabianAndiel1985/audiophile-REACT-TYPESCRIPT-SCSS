@@ -1,6 +1,90 @@
 @import "../../constants/variables";
 
-.footer {
+@mixin footer-basics {
     background-color: black ;
     color: $white;
+    
 }
+
+.footer {
+    @include footer-basics;   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @media only screen and (min-width: $minTablet) {
+       padding: 0px 20px;
+    }
+
+    &__headerListContainer {
+        
+        @media only screen and (min-width: $minDesktop) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    
+    .audioDescr{
+        text-align: center;
+        @media only screen and (min-width: $minTablet) {
+            text-align: left;
+        }
+    }
+
+    .copyrSm{
+        display: flex;
+        flex-direction: column;
+
+        &_cr{
+            text-align: center;
+        }
+
+        &_sm{
+            text-align: center;
+
+            @media only screen and (min-width: $minTablet) {
+                display: inline-block;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }
+
+
+        @media only screen and (min-width: $minTablet) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+    }
+
+    //Only for window desktop size
+
+    &Desktop {
+        @include footer-basics;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        &_firstSection {
+            padding-left: $paddingDesktopLanding;
+        }
+        &_secondSection {
+            padding-top: 18.765px;
+            padding: 15px;
+            padding-right: $paddingDesktopLanding;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            .footerDesktop_sm {
+                margin-top: auto;
+                text-align: right;
+            }
+
+        }
+
+
+    }
+}
+
+
+

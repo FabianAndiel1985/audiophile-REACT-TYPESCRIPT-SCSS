@@ -1,6 +1,6 @@
 @import "../../constants/variables";
 
-.heading {
+.headingTop {
     @media only screen and (min-width: $minTablet) {
         margin-right:auto;
     }
@@ -8,4 +8,13 @@
     @media only screen and (min-width: $minDesktop) {
         margin-right:initial;
     }
+}
+
+
+.headingBottom {
+    text-align: center;
+    @media only screen and (min-width: $minTablet) {
+        margin-right:auto;
+        text-align: left;
+    }   
 }
