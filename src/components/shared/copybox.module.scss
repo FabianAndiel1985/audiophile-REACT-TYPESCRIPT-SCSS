@@ -1,0 +1,50 @@
+@import "../../constants/variables";
+
+$container-height:350px;
+
+.container {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    &_copy{
+        height:$container-height;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        order:2;
+        h2 {
+            text-transform: uppercase;
+            span{
+                color:$brightOrange;
+            }
+        }
+
+        @media only screen and (min-width: $minDesktop) {
+            padding: 0px 40px;
+            order:1;     
+        }
+    }
+
+    &_img{
+        border-radius: $border-radius;
+        background-image: &$container-height;
+        height:350px;
+        @include responsiveBackgroundPicture;
+        background-image: url("../../assets/shared/desktop/image-best-gear.jpg") ;
+        order:1;
+        margin-bottom: 20px;
+
+        @media only screen and (min-width: $minDesktop) {
+            order:2;     
+        }
+    }
+
+    @media only screen and (max-width: $maxTablet) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+
+}

@@ -6,6 +6,7 @@ import CategoryBoxes from "../components/shared/categoryBoxes.compontent";
 import ProductBox from "../components/shared/productBox.component";
 import ProductBoxes from "../components/home/productBoxes.component";
 import Footer from "../components/shared/footer.component";
+import CopyBox from "../components/shared/copyBox.component";
 
 
 const App = (): JSX.Element => {
@@ -46,10 +47,11 @@ const App = (): JSX.Element => {
 
       <ProductBoxes/>
 
+      <CopyBox/>
+
 
       <div>
 
-        Test
       </div>
 
     </main>

@@ -1,5 +1,6 @@
 import styles from "./productBoxes.module.scss";
 import ProductBox from "../shared/productBox.component";
+import CopyBox from "../shared/copyBox.component";
 
 
 type AppProps = {
@@ -30,6 +31,7 @@ const ProductBoxes =
          productTitle={"yx1 earphones"}
         />
       </div>
+      
     </div>
     </>
   )
